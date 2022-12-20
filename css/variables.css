@@ -1,0 +1,9 @@
+:root {
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet : hsl(279, 6%, 55%);
+  --Very-dark-violet: #21092f;
+  --red: hsl(0, 100%, 66%);
+  --green: hsl(118, 100%, 66%);
+  --rounded-card: 10px;
+
+}

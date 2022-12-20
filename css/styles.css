@@ -1,0 +1,488 @@
+/* font-family: 'Space Grotesk', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+@import url('./variables.css');
+
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  min-height : 100vh;
+}
+
+main {
+  display              : grid;
+  grid-template-columns: 35% 65%;
+  /* grid-template-rows: repeat(2, 1fr); */
+  width                : 100vw;
+  height               : 100vh;
+}
+
+.cards {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  grid-row       : span 2;
+  /* grid-column : span 2; */
+  background     : url('../images/bg-main-desktop.png') no-repeat;
+  background-size: cover;
+  padding        : 50px;
+  height         : 100%;
+}
+
+.cards .card {
+  background     : url('../images/bg-card-front.png') no-repeat;
+  padding        : 20px;
+  width          : fit-content;
+  background-size: cover;
+  border-radius  : var(--rounded-card);
+  color          : white;
+  font-size      : 18px;
+  width          : 370px;
+  height         : 220px;
+}
+
+/* ? ========== Card 1 ========== */
+
+.cards .card.card-frond {
+  margin-bottom  : 30px;
+  display        : flex;
+  justify-content: space-around;
+  flex-direction : column;
+  align-items    : flex-start;
+  animation      : move 2s alternate ease-in-out;
+
+  transform: translateX(150px);
+}
+
+.cards .card.card-frond .logo {
+  margin-bottom: 40px;
+}
+
+.cards .card.card-frond .logo img {
+  width: 60px;
+}
+
+.cards .card.card-frond .card-frond-info {
+  width: 100%;
+}
+
+.cards .card.card-frond .card-frond-info .card-frond-number {
+  font-size     : 25px;
+  text-align    : left;
+  letter-spacing: 2px;
+  margin        : 20px 0;
+}
+
+
+.cards .card.card-frond .card-frond-info .card-frond-name,
+.card-frond-date {
+  text-transform: uppercase;
+  font-size     : 15px;
+}
+
+.cards .card.card-frond .card-frond-info .g-f {
+  display        : flex;
+  justify-content: space-between;
+  margin-top     : 10px;
+}
+
+/* ? ========== card 2 ========== */
+
+.cards .card.card-back {
+  /* width: 100%; */
+  background: #ededed;
+  position  : relative;
+  padding   : 20px 30px;
+  transform : translateX(250px);
+  animation : move 1.5s alternate ease-in-out;
+}
+
+.cards .card.card-back .card-line-black {
+  height    : 40px;
+  width     : 100%;
+  background: #191919;
+  position  : absolute;
+  top       : 20px;
+  left      : 0;
+}
+
+.cards .card.card-back .card-back-ccv {
+  margin-top   : 60px;
+  text-align   : right;
+  background   : #a7aeb3;
+  padding      : 10px;
+  border-radius: 5px;
+  font-size    : 15px;
+  height       : 38px;
+
+  transition: height .3s;
+}
+
+.cards .card.card-back .fake-info {
+  text-align   : center;
+  /* padding   : 20px; */
+  margin-top   : 25px;
+}
+
+.cards .card.card-back .fake-info span {
+  display       : inline-block;
+  height        : 2px;
+  /* width      : 20px; */
+  margin        : 0 5px;
+  padding       : 0;
+  vertical-align: top;
+  background    : #c2cacf;
+  border-radius : 5px;
+
+  animation: animate .8s alternate infinite;
+}
+
+.cards .card.card-back .fake-info span:nth-child(1) {
+  width : 170px;
+  height: 4px;
+}
+
+.cards .card.card-back .fake-info span:nth-child(2) {
+  width : 40px;
+  height: 3px;
+}
+
+.cards .card.card-back .fake-info span:nth-child(3) {
+  width : 120px;
+  height: 2.5px;
+}
+
+.cards .card.card-back .fake-info span:nth-child(4) {
+  width : 70px;
+  height: 4px;
+}
+
+.cards .card.card-back .fake-info span:nth-child(5) {
+  width : 50px;
+  height: 2.5px;
+}
+
+.cards .card.card-back .fake-info span:nth-child(6) {
+  width : 100px;
+  height: 3px;
+}
+
+.cards .card.card-back .fake-info span:nth-child(7) {
+  width : 90px;
+  height: 3px;
+}
+
+.cards .card.card-back .fake-info span:nth-child(8) {
+  width : 70px;
+  height: 3px;
+}
+
+
+
+
+/* ? ========== content ========== */
+
+
+.content {
+  display        : flex;
+  justify-content: center;
+  align-items    : flex-end;
+  flex-direction : column;
+  height         : 100vh;
+  /* grid-column : 2; */
+
+  background: url('../images/Sprinkle.svg');
+
+}
+
+.alert {
+  margin-right  : 100px;
+  margin-bottom : 20px;
+  background    : var(--red);
+  padding       : 20px;
+  color         : #fff;
+  letter-spacing: 1px;
+  border-radius : var(--rounded-card);
+}
+
+/* ? ========== form ========== */
+
+.form-cards {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  margin-right   : 100px;
+  padding        : 20px;
+
+  background   : #fffcfc;
+  box-shadow   : 0 0 20px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  scale    : 1;
+  animation: show 1.5s alternate ease-in-out;
+}
+
+@keyframes show {
+  from {
+    scale: 0;
+  }
+}
+
+.form-cards .form-label {
+  display       : block;
+  color         : var(--Very-dark-violet);
+  font-size     : 14px;
+  margin        : 10px 0;
+  text-transform: uppercase;
+  font-weight   : 500;
+}
+
+.form-cards .input-form {
+  font-size    : 18px;
+  padding      : 8px;
+  margin-bottom: 20px;
+  width        : 100%;
+  border-radius: 5px;
+  border       : 1px solid var(--Light-grayish-violet);
+  outline      : none;
+
+  transition: .3s ease-in-out;
+}
+
+.form-cards .input-form:focus {
+  border-color: var(--Very-dark-violet);
+}
+
+.form-cards .input-form::placeholder {
+  color      : rgba(0, 0, 0, 0.5);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.form-cards .form-group.g-2 {
+  display: flex;
+}
+
+.form-cards .form-group.g-2 .form-expdate {
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.form-cards .form-group.g-2 .form-expdate input {
+  width: 80px;
+  white-space: nowrap;
+}
+
+.form-cards .form-group.g-2 .cvc input {
+  width: 150px;
+}
+
+.btn-send {
+  border : none;
+  color  : var(--Light-grayish-violet);
+  padding: 12px 0;
+
+  cursor       : pointer;
+  background   : var(--Very-dark-violet);
+  border-radius: 5px;
+  font-size    : 15px;
+  font-family  : 'Space Grotesk', sans-serif;
+  width        : 100%;
+}
+
+.input-error {
+  border-color: var(--red) !important;
+}
+
+.message-error {
+  color     : var(--red);
+  text-align: center;
+  display   : none;
+}
+
+.message-error.show {
+  display: inline-block;
+}
+
+
+.form-cards .complete {
+  width          : 350px;
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.form-cards .complete img {
+  width: 70px;
+}
+
+.form-cards .complete .complete-text {
+  color     : var(--Very-dark-violet);
+  padding   : 20px;
+  text-align: center;
+}
+
+.form-cards .complete .complete-text span {
+  font-size: 40px;
+  display  : block;
+  margin   : 10px 0;
+  color    : var(--Very-dark-violet);
+}
+
+
+
+
+
+
+
+@keyframes animate {
+  from {
+    background: #c2cacf;
+  }
+
+  to {
+    background: #a5a6a7;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-100px)
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows   : repeat(2, 1fr);
+  }
+
+  .cards {
+    grid-column: span 2;
+    grid-row   : 1;
+  }
+
+  .content {
+    grid-column: span 2;
+  }
+
+  .cards .card {
+    width   : 290px;
+    height  : 160px;
+    padding : 10px;
+    position: relative;
+  }
+
+
+  .cards .card.card-frond .card-frond-info .card-frond-name,
+  .card-frond-date {
+
+    font-size: 12px;
+  }
+
+
+  .cards .card.card-frond {
+    margin   : 0;
+    transform: translateX(0);
+    z-index  : 2000;
+    top      : 158px;
+    left     : 20px;
+  }
+
+  .cards .card.card-back {
+    transform: translateX(0);
+    z-index  : 1000;
+    top      : -120px;
+    right    : -50px;
+  }
+
+  .cards .card.card-frond .card-frond-info .card-frond-number {
+    font-size: 18px;
+    margin   : 10px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    grid-template-columns: 10% 90%;
+    grid-template-rows   : repeat(2, 1fr);
+  }
+  
+  .cards {
+    grid-column    : span 2;
+    grid-row       : 1;
+    justify-content: center;
+    padding        : 0;
+  }
+
+  .cards .card {
+    width   : 290px;
+    height  : 160px;
+    padding : 10px;
+    position: relative;
+  }
+
+
+  .cards .card.card-frond .card-frond-info .card-frond-name,
+  .card-frond-date {
+
+    font-size: 12px;
+  }
+
+
+  .cards .card.card-frond {
+    margin   : 0;
+    transform: translateX(0);
+    z-index  : 2000;
+    top      : 158px;
+    left     : 20px;
+  }
+
+  .cards .card.card-back {
+    transform: translateX(0);
+    z-index  : 1000;
+    top      : -120px;
+    right    : -50px;
+  }
+
+  .cards .card.card-frond .card-frond-info .card-frond-number {
+    font-size: 18px;
+    margin   : 10px 0;
+  }
+  
+  
+  .content {
+    grid-column    : span 2;
+    justify-content: flex-start;
+    align-items    : center;
+    /* padding     : 100px 0; */
+  }
+
+  .form-cards {
+    margin: 0;
+    width: 100%;
+  }
+
+  .form-cards .form-group.g-2 .cvc input {
+    width: 100%;
+    /* min-width: 200px; */
+  }
+}
+
+.attribution {
+  font-size : 11px;
+  text-align: center;
+  position  : absolute;
+  bottom    : 10px;
+  left      : 50%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

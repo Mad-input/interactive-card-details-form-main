@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="cards">
+      <div class="card card-frond">
+        <div class="logo">
+          <img src="./images/card-logo.svg" alt="logo">
+        </div>
+        <div class="card-frond-info">
+          <div class="card-frond-number" id="cardNumber">0000 0000 0000 0000</div>
+          <div class="g-f">
+            <div class="card-frond-name" id="cardName">Jane Aplaseed</div>
+            <div class="card-frond-date"><span class="mm">00</span>/<span class="yy">00</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-back">
+        <div class="card-line-black"></div>
+        <div class="card-back-ccv">000</div>
+        <div class="fake-info">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://www.frontendmentor.io/profile/Mad-input">Miguel Contreras</a>.
+        </div>
+      </div>
+      <form class="form-cards" id="form" autocomplete="off">
+        <div class="form-group g1">
+          <label for="inputName" class="form-label">Cardholder name</label>
+          <input type="text" id="inputName" class="input-name input-form" placeholder="e.g. Jane Appleseed" maxlength="25" >
+          <label for="inputNumber" class="form-label">Card Number</label>
+          <input type="text" id="inputNumber" class="input-number input-form" placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="19" >
+          </div>
+          <div class="form-group g-2">
+          <div class="form-expdate">
+            <label class="form-label">EXP.Date (MM/YY)</label>
+            <input type="text" class="input-form input-date" id="mm" placeholder="MM" maxlength="2" >
+            <input type="text" class="input-form input-date" id="yy" placeholder="YY" maxlength="2" >
+          </div>
+          <div class="cvc">
+            <label for="cvc" class="form-label">cvc</label>
+            <input type="text" id="inputCvc" class="input-date input-form" placeholder="e.g. 123" minlength="3" maxlength="3" >
+          </div>
+        </div>
+        <button class="btn-send" id="btnSend" type="submit">Confirm</button>
+        <span class="message-error" id="message">All fields are </span>
+      </form>
+    </div>
+  </main>
+  
+
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
